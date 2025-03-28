@@ -14,12 +14,14 @@ public class Main {
             if (command.equals("push_back")){
                 int a = sc.nextInt();
                 intArr.add(a);
-            } else if (command.equals("pop_back")){
-                int index = intArr.size() - 1;
-                intArr.remove(index);
-            } else if (command.equals("size")){
+            } 
+            else if (command.equals("pop_back")){
+                intArr.remove(intArr.size() - 1);
+            } 
+            else if (command.equals("size")){
                 System.out.println(intArr.size());
-            } else {
+            } 
+            else {
                 int k = sc.nextInt();
                 System.out.println(intArr.get(k - 1));
             }
