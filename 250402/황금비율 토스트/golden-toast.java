@@ -17,22 +17,26 @@ public class Main {
         ListIterator<Character> it = breads.listIterator(breads.size());
         
         for (int i = 0; i < m; i++){
-            String com = sc.next();
-
-            if (com.equals("L")){
-                if (it.hasPrevious())
-                    it.previous();
-            } else if (com.equals("R")){
-                if (it.hasNext())
-                    it.next();
-            } else if (com.equals("D")){
-                if (it.hasNext()){
-                    it.next();
-                    it.remove();
-                }
-            } else {
-                char c = sc.next().charAt(0);
-                it.add(c);
+            char com = sc.next().charAt(0);
+            switch (com) {
+                case 'L' :
+                    if (it.hasPrevious())
+                        it.previous();
+                    break;
+                case 'R' :
+                    if (it.hasNext())
+                        it.next();
+                    break;
+                case 'D' :
+                    if (it.hasNext()){
+                        it.next();
+                        it.remove();
+                    }
+                    break;
+                default :
+                    char c = sc.next().charAt(0);
+                    it.add(c);
+                    break;
             }
         }
 
